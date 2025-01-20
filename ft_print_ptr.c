@@ -32,8 +32,8 @@ int	ft_print_ptr(void *ptr)
 
 	if (!ptr)
 	{
-		write(1, "(nill)", 6);
-		return (6);
+		write(1, "(nil)", 5);
+		return (5);
 	}
 	count = 0;
 	address = (unsigned long long)ptr;
