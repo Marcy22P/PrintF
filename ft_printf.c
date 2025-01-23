@@ -28,7 +28,7 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == '%' && format[i + 1])
 		{
 			i++;
-			count += ft_sort_printf(format[i], args);
+			count += ft_sort_printf(format[i], &args);
 		}
 		else
 		{

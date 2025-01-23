@@ -12,22 +12,22 @@
 
 #include "ft_printf.h"
 
-int	ft_sort_printf(char c, va_list args)
+int	ft_sort_printf(char c, va_list *args)
 {
 	if (c == 'c')
-		return (ft_print_char(va_arg(args, int)));
+		return (ft_print_char(va_arg(*args, int)));
 	else if (c == 's')
-		return (ft_print_string(va_arg(args, char *)));
+		return (ft_print_string(va_arg(*args, char *)));
 	else if (c == 'p')
-		return (ft_print_ptr(va_arg(args, void *)));
+		return (ft_print_ptr(va_arg(*args, void *)));
 	else if (c == 'd' || c == 'i')
-		return (print_decimal(va_arg(args, int)));
+		return (print_decimal(va_arg(*args, int)));
 	else if (c == 'u')
-		return (print_unsigned(va_arg(args, unsigned int)));
+		return (print_unsigned(va_arg(*args, unsigned int)));
 	else if (c == 'x')
-		return (ft_print_hex(va_arg(args, unsigned int), 0));
+		return (ft_print_hex(va_arg(*args, unsigned int), 0));
 	else if (c == 'X')
-		return (ft_print_hex(va_arg(args, unsigned int), 1));
+		return (ft_print_hex(va_arg(*args, unsigned int), 1));
 	else if (c == '%')
 		return (ft_print_percent());
 	return (0);

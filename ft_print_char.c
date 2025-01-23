@@ -14,6 +14,9 @@
 
 int	ft_print_char(int c)
 {
-	write(1, &c, 1);
+	char	cd;
+
+	cd = (char)c;
+	write(1, &cd, 1);
 	return (1);
 }

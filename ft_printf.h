@@ -25,6 +25,6 @@ int	ft_print_percent(void);
 int	ft_print_ptr(void *ptr);
 int	ft_print_string(const char *s);
 int	ft_printf(const char *format, ...);
-int	ft_sort_printf(char c, va_list args);
+int	ft_sort_printf(char c, va_list *args);
 
 #endif
